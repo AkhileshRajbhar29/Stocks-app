@@ -6,18 +6,18 @@ import Pricing from './Pricing';
 import Education from './Educatio';
 import OpenAccount from '../OpenAccount';
 import Navbar from '../Navbar';
-import Footer from '../Footerer';
+import Footer from '../Footer';
 
 const HomePage = () => {
   return (
-    <>  <Navbar/>
+    <>   
         <Hero/>
         <Awards/>
         <Stats/>
         <Pricing/>
         <Education/>
         <OpenAccount/>
-        <Footer/>
+         
     </>
   );
 }
