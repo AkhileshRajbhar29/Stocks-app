@@ -1,6 +1,6 @@
 const mongoose = require ("mongoose");
 
-const UserSchema = new mongoose.Schema({
+const UsersSchema = new mongoose.Schema({
     email:{
         type:String,
         required:true,
@@ -15,4 +15,4 @@ const UserSchema = new mongoose.Schema({
     }
 );
 
-exports.UserModel = mongoose.model("UserModel", UserSchema);
+exports.UsersModel = mongoose.model("UsersModel", UsersSchema);

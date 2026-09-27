@@ -1,6 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin= () =>{
+    setError("");
+    
+    axios
+    .post("http://localhost:3002/login", {
+      email: loginEmail,
+      password: loginPassword,
+    })
+    .then((res)=>{
+      console.log(res.data);
+
+      setLoginEmail("");
+      setLoginPassword("");
+
+      navigate("/");
+    })
+    .catch((err)=>{
+      console.log(err);
+      setError(err.reponse?.data || "Login failed");
+    })
+  }
+  
   return (
     <div
       className="min-vh-100 d-flex justify-content-center align-items-center"
@@ -44,25 +74,12 @@ const Login = () => {
             Login
           </h1>
 
-          {/* Login */}
-          {/* <p
-            className="text-center"
-            style={{ fontSize: "14px",  marginBottom: "30px", color: "rgba(255,255,255,0.9)",
-            }}
-          >
-            Already a member?
-            <a
-              href="/"
-              className="text-decoration-none fw-bold"
-              style={{
-                color: "#2196f3",
-              }}
-            >
-              {" "}
-              Log in
-            </a>
-          </p> */}
-
+          {error && (
+            <p style={{ color: "#ff6b6b", fontSize: "14px", textAlign: "center", marginBottom: "10px" }}>
+              {error}
+            </p>
+          )}
+ 
           {/* Email */}
           <div className="mb-4">
             <label
@@ -75,6 +92,8 @@ const Login = () => {
             <input
               type="email"
               className="w-100"
+              value={loginEmail}
+              onChange={(e) => setLoginEmail (e.target.value)}
               style={{ height: "30px", background: "transparent", border: "none", borderBottom: "2px solid white", outline: "none", color: "white", fontSize: "16px"}}/>
           </div>
 
@@ -90,14 +109,9 @@ const Login = () => {
             <input
               type="password"
               className="w-100"
-              style={{
-                height: "30px",
-                background: "transparent",
-                border: "none",
-                borderBottom: "2px solid white",
-                outline: "none",
-                color: "white",
-                fontSize: "16px",
+              value={loginPassword}
+              onChange={(e) => setLoginPassword(e.target.value)}
+              style={{ height: "30px", background: "transparent", border: "none", borderBottom: "2px solid white", outline: "none", color: "white", fontSize: "16px",
               }}
             />
           </div>
@@ -105,6 +119,7 @@ const Login = () => {
           {/* Login Button */}
           <button
             className="btn w-100 text-white fw-bold"
+            onClick={handleLogin}
             style={{ height: "46px", borderRadius: "5px", backgroundColor: "#5592fb", fontSize: "19px",
             }}
           >
@@ -146,8 +161,7 @@ const Login = () => {
               className="border-0 rounded-circle d-flex justify-content-center align-items-center"
               style={{ width: "38px", height: "38px", background: "transparent", color: "#1877f2", fontSize: "23px"}}
             >
-              {/* <i className="fa-brands fa-facebook-f"></i> */}
-              <i class="fa-brands fa-facebook" style={{color: "#5592fb"}}></i>
+              <i className="fa-brands fa-facebook" style={{color: "#5592fb"}}></i>
             </button>
 
             <button
