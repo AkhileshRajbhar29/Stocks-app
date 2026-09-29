@@ -9,9 +9,9 @@ const ProductsPage = () => {
     <div>
         <Hero/>
         <LeftSection
-        imageURL="media/images/kite.png"
-        productName="Kite"
-        productDescription="Our ultra-fast flagship trading platform with streaming market data, advanced charts, an elegant UI, and more. Enjoy the Kite experience seamlessly on your Android and iOS devices."
+        imageURL="media/images/tradexPlateform.png"
+        productName="TradeX Platform"
+        productDescription="TradeX is designed to bring essential trading and investment features together in one simple and modern platform. Explore markets, manage your portfolio, and use intuitive tools to understand your investments."
         tryDemo=""
         learnMore=""
         googlePlay=""
@@ -19,32 +19,32 @@ const ProductsPage = () => {
         />
         
         <RightSection
-        imageURL="media/images/console.png"
-        productName="Console"
-        productDescription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
+        imageURL="media/images/tradingPlateform.png"
+        productName="Trading Platform"
+        productDescription="A clean and responsive trading interface designed to help users explore market data, track stocks, and manage their trading activities with ease. Access the platform through a modern web experience built for convenience."
         learnMore=""
         />
         
         <LeftSection
-        imageURL="media/images/coin.png"
-        productName="Coin"
-        productDescription="Buy direct mutual funds online, commission-free, delivered directly to your Demat account. Enjoy the investment experience on your Android and iOS devices."
+        imageURL="media/images/portfolioDshboard.png"
+        productName="Portfolio Dashboard"
+        productDescription="A centralized dashboard for managing your TradeX account. Track your holdings, positions, transactions, and portfolio performance through an easy-to-understand interface."
         tryDemo=""
         learnMore=""
         googlePlay=""
         appstore=""
         />
         <RightSection
-        imageURL="media/images/kiteconnect.png"
-        productName="Kite Connect API"
-        productDescription="Build powerful trading platforms and experiences with our super simple HTTP/JSON APIs. If you are a startup, build your investment app and showcase it to our clientbase."
+        imageURL="media/images/mutualFund.png"
+        productName="Mutual Funds"
+        productDescription="Explore mutual fund investment options through a simple and convenient interface. View available funds, understand basic investment information, and keep your investments organized in one place."
         learnMore=""
         />
         
         <LeftSection
-        imageURL="media/images/varsity.png"
-        productName="Varsity"
-        productDescription="Our ultra-fast flagship trading platform with streaming market data, advanced charts, an elegant UI, and more. Enjoy the Kite experience seamlessly on your Android and iOS devices."
+        imageURL="media/images/tradexAPI.png"
+        productName="TradeX API"
+        productDescription="Build and experiment with trading-related applications using APIs designed for the TradeX project. Developers can explore market data, account information, and other platform features through a simple API-based architecture."
         tryDemo=""
         learnMore=""
         googlePlay=""
@@ -52,9 +52,7 @@ const ProductsPage = () => {
         />
 
         <p className='text-center fs-5 mt-5'>
-            Want to know more about our technology stack? Check out the 
-            <a href="" style={{textDecoration:"none"}}>Zerodha.tech</a>
-             blog.
+            Want to know more about the technology behind TradeX? Explore our platform features, development approach, and the technologies used to build this project.
         </p>
         <Universe/>
     </div>

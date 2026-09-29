@@ -13,22 +13,11 @@ const LeftSection = ({
     <div className='continer mt-5'>
         <div className='row '>
             <div className='col-6 text-center'>
-                <img src={imageURL}/>
+                <img src={imageURL} style={{height:"100%", width:"100%"}}/>
             </div>
             <div className='col-6 p-5 mt-5'>
                 <h1>{productName}</h1>
                 <p>{productDescription}</p>
-                <div>
-                    <a href={tryDemo} style={{textDecoration:"none"}}>
-                        Try Demo
-                        <i className='fa fa-long-arrow-right' aria-hidden="true"> </i>
-                    </a>
-                    <a href={learnMore} style={{marginLeft:"50px", textDecoration:"none"}}>
-                        Learn More
-                        <i className='fa fa-long-arrow-right' aria-hidden="true"> </i>
-                    </a>
-
-                </div>  
                 <div className='mt-3'>
                     <a href={googlePlay}>
                         <img src="media/images/googlePlayBadge.svg"/>

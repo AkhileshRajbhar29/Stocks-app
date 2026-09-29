@@ -9,14 +9,15 @@ const Navbar = () => {
         
         <div className="container p-2">
           <Link className="navbar-brand" to="/">
-            <img src="media/images/logo.svg" style={{width:"25% "}} alt="logo"/>
+            <img src="media/images/TradeX_logo.svg" style={{width:"25% "}} alt="logo"/>
+            
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <form className='d-flex' role="search">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
 
                  <li className="nav-item">
                     <Link className="nav-link active" to="/">Home</Link>
@@ -51,6 +52,10 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link active" to="support">Support</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link active px-3 py-2" to="support" style={{background:"rgb(0,200,150)", borderRadius:"5px", fontWeight:"500", boxShadow:"0 4px 5px rgba(0,0,0,0.55)"}}>Dashboard</Link>
                 </li>
                 
               </ul>

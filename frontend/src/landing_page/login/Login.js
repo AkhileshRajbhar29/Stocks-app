@@ -34,13 +34,13 @@ const Login = () => {
   return (
     <div
       className="min-vh-100 d-flex justify-content-center align-items-center"
-      style={{ backgroundSize: "cover", backgroundPosition: "center", overflow: "hidden", padding: "20px",
+      style={{ backgroundSize: "cover", backgroundPosition: "center", overflow: "hidden", padding: "20px",   backgroundColor:"rgb(116, 214, 190)"
       }}
     >
       {/* Main Glass Container */}
       <div
         className="w-100 position-relative overflow-hidden"
-        style={{ maxWidth: "1020px", height: "665px", backgroundColor:"rgba(59, 56, 111, 0.6)",  border: "2px solid rgba(255,255,255,0.55)", borderRadius: "25px", backdropFilter: "blur(5px)", WebkitBackdropFilter: "blur(5px)", boxShadow: "0 25px 60px rgba(0,0,0,0.45)",
+        style={{ maxWidth: "1020px", height: "665px", backgroundColor:"rgb(30, 189, 149)",  border: "2px solid rgba(255,255,255,0.55)", borderRadius: "25px", backdropFilter: "blur(5px)", WebkitBackdropFilter: "blur(5px)", boxShadow: "0 25px 60px rgba(0,0,0,0.45)",
         }}
       >
  
@@ -91,10 +91,10 @@ const Login = () => {
 
             <input
               type="email"
-              className="w-100"
+              className="w-100 px-3 py-4"
               value={loginEmail}
               onChange={(e) => setLoginEmail (e.target.value)}
-              style={{ height: "30px", background: "transparent", border: "none", borderBottom: "2px solid white", outline: "none", color: "white", fontSize: "16px"}}/>
+              style={{ height: "30px", background: "transparent", border: "none", borderBottom: "2px solid white",  borderRadius:"20px", outline: "none", color: "white", fontSize: "16px"}}/>
           </div>
 
           {/* Password */}
@@ -108,10 +108,10 @@ const Login = () => {
 
             <input
               type="password"
-              className="w-100"
+              className="w-100 px-3 py-4"
               value={loginPassword}
               onChange={(e) => setLoginPassword(e.target.value)}
-              style={{ height: "30px", background: "transparent", border: "none", borderBottom: "2px solid white", outline: "none", color: "white", fontSize: "16px",
+              style={{ height: "30px", background: "transparent", border: "none", borderBottom: "2px solid white", borderRadius:"20px", outline: "none", color: "white", fontSize: "16px",
               }}
             />
           </div>
@@ -120,7 +120,7 @@ const Login = () => {
           <button
             className="btn w-100 text-white fw-bold"
             onClick={handleLogin}
-            style={{ height: "46px", borderRadius: "5px", backgroundColor: "#5592fb", fontSize: "19px",
+            style={{ height: "46px", borderRadius: "5px", borderRadius:"20px", backgroundColor: "#27233a", fontSize: "19px",
             }}
           >
             Login

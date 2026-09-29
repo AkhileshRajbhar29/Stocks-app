@@ -8,23 +8,27 @@ const Team = () => {
             </div>
             <div className="row p-5 mt-5 text-muted" style={{lineHeight:"1.8", fontSize:"1.2em"}}>
                 <div className='col-6 p-5 text-center'>
-                    <img src="media/images/nithinKamath.jpg" alt="founder-img" style={{borderRadius:"100%", width:"60%"}}/>
-                    <h5 className='mt-4'>Nithin Kamath</h5>
-                    <p className='mt-3'>Founder, CEO</p>
+                    <img src="media/images/developer.jpg" alt="founder-img" style={{borderRadius:"100%", width:"60%"}}/>
+                    <h5 className='mt-4'>Akhilesh Rajbhar</h5>
+                    <p className='mt-3'>Developer   </p>
                 </div>
                 <div className='col-6 p-5'>
                     <p>
-                        Nithin bootstrapped and founded Zerodha in 2010 to overcome the hurdles he faced during his decade long stint as a trader. Today, Zerodha has changed the landscape of the Indian broking industry.
+                        TradeX is built with a focus on combining technology, simplicity, and financial learning into one modern platform.
                     </p>
                     <p>
-                        He is a member of the SEBI Secondary Market Advisory Committee (SMAC) and the Market Data Advisory Committee (MDAC).
+                        Our goal is to create an easy-to-use experience that helps users explore the stock market, understand their portfolio, and interact with essential trading tools.
                     </p>
                     <p>
-                        Playing basketball is his zen.
+                        From designing the user interface to developing the frontend, backend, and dashboard, every part of TradeX is built with continuous learning and improvement in mind.
                     </p>
                     <p>
-                        Connect on <a href="" style={{textDecoration:"none"}}>Homepage</a> / <a href="" style={{textDecoration:"none"}}>TradingQnA</a> / <a href="" style={{textDecoration:"none"}}>Twitter</a>
+                        TradeX represents our effort to understand how modern trading platforms work and how technology can make financial information easier to explore and manage.
                     </p>
+                    <p>
+                        We're constantly learning, building, and improving TradeX.
+                    </p>
+                    
                 </div>
             </div>
         </div>

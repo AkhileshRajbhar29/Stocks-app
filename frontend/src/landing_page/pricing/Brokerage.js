@@ -4,25 +4,21 @@ const Brokerage = () => {
   return (
     <div className='container'>
         <div className='row p-5 mt-5 text-center border-top'>
-            <div className='col-8 p-4'>
                 <a href="" style={{textDecoration:"none"}}>
                     <h3 className='fs-5'>Brokerage calculation</h3>
                 </a>
-                <ul className='text-start text-muted' style={{lineHeight:"2.5", fontSize:'12px'}}>
-                    <li>Call & Trade and RMS auto-squareoff:Additional charges of ₹50 + GST per order.</li>
-                    <li>Digital contract notes will be set via e-mail.</li>
-                    <li>Physical copies of contract notes, if required, shall be charged ₹20 per contract note. Courier charges apply.</li>
-                    <li>For NRO account (non-PIS), 0.5% or ₹100 per executed order for equity (whichever is lower).</li>
-                    <li>If the account is in debit balance, any order placed will be charged ₹40 per executed order instead of ₹20 per executed order.</li>
+                <ul className='text-start text-muted' style={{lineHeight:"2.5", fontSize:'14px'}}>
+                    <li>Call & Trade / Auto Square-off: Additional charges may apply as configured in the TradeX project.</li>
+                    <li>Digital Contract Notes: Contract notes can be provided digitally through e-mail.</li>
+                    <li>Physical Contract Notes: Physical copies, if requested, may be subject to applicable printing and delivery charges.</li>
+                    <li>Equity Transactions: Brokerage is calculated according to the pricing structure configured in the TradeX platform.</li>
+                    <li>Order Charges: Applicable charges are displayed according to the transaction type and pricing configuration.</li>
                 </ul>
-            </div>
-            <div className='col-4 p-4'>
-                <a href="" style={{textDecoration:"none"}}>
-                    <h3 className='fs-5'>Brokerage calculation</h3>
-                </a>
-
-            </div>
+            <p className='text-start text-muted' style={{fontSize:'14px'}}>Note: TradeX is a demo/educational project. The brokerage and other charges displayed on this page are for demonstration purposes only and do not represent actual brokerage or financial-service pricing.</p>
         </div>
+        <p>
+            
+        </p>
     </div>
   )
 }

@@ -37,13 +37,13 @@ const SignUp = () => {
   return (
     <div
       className="min-vh-100 d-flex justify-content-center align-items-center"
-      style={{ backgroundSize: "cover", backgroundPosition: "center", overflow: "hidden", padding: "20px",
+      style={{ backgroundSize: "cover", backgroundPosition: "center", overflow: "hidden", padding: "20px", backgroundColor:"rgb(116, 214, 190)"
       }}
     >
       {/* Main Glass Container */}
       <div
         className="w-100 position-relative overflow-hidden"
-        style={{ maxWidth: "1020px", height: "665px", backgroundColor:"rgba(59, 56, 111, 0.6)",  border: "2px solid rgba(255,255,255,0.55)", borderRadius: "25px", backdropFilter: "blur(5px)", WebkitBackdropFilter: "blur(5px)", boxShadow: "0 25px 60px rgba(0,0,0,0.45)",
+        style={{ maxWidth: "1020px", height: "665px", backgroundColor:"rgb(30, 189, 149)" ,  border: "2px solid rgba(255,255,255,0.55)", borderRadius: "25px", backdropFilter: "blur(5px)", WebkitBackdropFilter: "blur(5px)", boxShadow: "0 25px 60px rgba(0,0,0,0.45)",
         }}
       >
 
@@ -60,7 +60,7 @@ const SignUp = () => {
             padding: "50px 32px 25px",
             borderRadius: "20px",
             border: "2px solid rgba(255,255,255,0.3)",
-            background: "rgba(70,80,100,0.38)",
+            background: "rgba(13, 10, 40, 0.38)",
             backdropFilter: "blur(12px)",
             WebkitBackdropFilter: "blur(12px)",
             boxShadow: "0 10px 35px rgba(0,0,0,0.35)",
@@ -112,10 +112,10 @@ const SignUp = () => {
 
             <input
               type="email"
-              className="w-100"
+              className="w-100 px-3 py-4"
               value={loginEmail}
               onChange={(e)=> setLoginEmail(e.target.value)}
-              style={{ height: "30px", background: "transparent", border: "none", borderBottom: "2px solid white", outline: "none", color: "white", fontSize: "16px"}}/>
+              style={{ height: "30px", background: "transparent", border: "none", borderBottom: "2px solid white", borderRadius:"20px", outline: "none", color: "white", fontSize: "16px"}}/>
           </div>
 
           {/* Password */}
@@ -129,7 +129,7 @@ const SignUp = () => {
 
             <input
               type="password"
-              className="w-100"
+              className="w-100 px-3 py-4"
               value={loginPassword}
               onChange={(e)=> setLoginPassword(e.target.value)}
               style={{
@@ -140,6 +140,7 @@ const SignUp = () => {
                 outline: "none",
                 color: "white",
                 fontSize: "16px",
+                borderRadius:"20px"
               }}
             />
           </div>
@@ -148,7 +149,7 @@ const SignUp = () => {
           <button
             className="btn w-100 text-white fw-bold"
             onClick={handleSignup}
-            style={{ height: "46px", borderRadius: "5px", backgroundColor: "#5592fb", fontSize: "19px",
+            style={{ height: "46px", borderRadius: "5px", borderRadius:"20px", backgroundColor: "#27233a", fontSize: "19px",
             }}
           >
             Sign Up
@@ -187,9 +188,9 @@ const SignUp = () => {
 
             <button
               className="border-0 rounded-circle d-flex justify-content-center align-items-center"
-              style={{ width: "38px", height: "38px", background: "transparent", color: "#1877f2", fontSize: "23px"}}
+              style={{ width: "38px", height: "38px", background: "transparent", color: "#2c5ff5", fontSize: "23px"}}
             >
-              <i className="fa-brands fa-facebook" style={{color: "#5592fb"}}></i>
+              <i className="fa-brands fa-facebook" style={{color: "#2c86fb"}}></i>
             </button>
 
             <button

@@ -6,9 +6,9 @@ const Footer = () => {
         <div className='container border-top mt-5'>
             <div className='row mt-5'>
                 <div className='col'>
-                    <img src="media/images/logo.svg" style={{ width: "50%" }} alt="Logo" />
+                    <img src="media/images/TradeX_logo.svg" style={{ width: "50%"}}  alt="Logo" />
                     <p>
-                        &copy; 2010 - 2024, Not Zerodha Booking Ltd. All rights reserved.
+                        &copy; 2026, TradeX. All rights reserved.
                     </p>
                 </div>
                 <div className='col' >
@@ -18,41 +18,44 @@ const Footer = () => {
                     <a href="#"  style={{textDecoration:"none", color:"black"}}  className='mb-3'>Pricing</a><br />
                     <a href="#"  style={{textDecoration:"none", color:"black"}}  className='mb-3'>Referral program</a><br />
                     <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Careers</a><br />
-                    <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Zerodha.tech</a><br />
+                    {/* <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Zerodha.tech</a><br />
                     <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Press & media</a><br />
-                    <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Zerodha cares (CSR)</a>
+                    <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Zerodha cares (CSR)</a> */}
                 </div>
                 <div className='col'>
                     <p className='fw-bold'>Support</p>
                     <a href="#"  style={{textDecoration:"none", color:"black"}} >Contact</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Support portal</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Z-Connect blog</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}} >List of change</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Downloads & resources</a><br />
+                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Support Center</a><br />
+                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Help & FAQs</a><br />
+                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Trading Resources</a><br />
+                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Downloads</a><br />
                 </div>
                 <div className='col'>
                     <p className='fw-bold'>Account</p>
                     <a href="#" style={{textDecoration:"none" , color:"black"}} >Open an account</a><br />
-                    <a href="#" style={{textDecoration:"none" , color:"black"}}>Fund transfer</a><br />
-                    <a href="#" style={{textDecoration:"none" , color:"black"}}>60 day challenge</a><br />
+                    <a href="#" style={{textDecoration:"none" , color:"black"}}>Login</a><br />
+                    <a href="#" style={{textDecoration:"none" , color:"black"}}>Fund Your Account</a><br />
                 </div>
 
             </div>
             <div className=' mt-5 text-muted' style={{fontSize:"14px"}}>
                 <p>
-                    Zerodha Broking Ltd.: Member of NSE, BSE, MCX & MSEI – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Registered Address: Zerodha Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any complaints pertaining to securities broking please write to complaints@zerodha.com, for DP related to dp@zerodha.com. Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI | ICF
+                    TradeX is a stock market learning and trading platform project designed to provide users with a simple and modern interface for exploring financial markets.
                 </p>
                 <p>
-                    Procedure to file a complaint on SEBI SCORES/SMARTODR: Register on SCORES portal & SMARTODR. Mandatory details for filing complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail ID. Benefits: Effective Communication, Speedy redressal of grievances
-                    Smart Online Dispute Resolution | Grievances Redressal Mechanism
+                    The information and features available on this platform are provided for educational and demonstration purposes and should not be considered investment advice or a recommendation to buy or sell any security.
                 </p>
                 <p>
-                    Investments in securities market are subject to market risks; read all the related documents carefully before investing.
+                    Investments in securities markets are subject to market risks. Users should carefully understand the risks and relevant documents before making any investment decisions.
                 </p>
                 <p>
-                    "Prevent unauthorised transactions in your account. Update your mobile numbers/email IDs with your stock brokers/depository participants. Receive information of your transactions directly from Exchange/Depositories on your mobile/email at the end of the day. Issued in the interest of investors. KYC is one time exercise while dealing in securities markets - once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary." Dear Investor, if you are subscribing to an IPO, there is no need to issue a cheque. Please write the Bank account number and sign the IPO application form to authorize your bank to make payment in case of allotment. In case of non allotment the funds will remain in your bank account. As a business we don't give stock tips, and have not authorized anyone to trade on behalf of others. If you find anyone claiming to be part of Zerodha and offering such services, please create a ticket here.
-                    *Customers availing insurance advisory services offered by Ditto (Tacterial Consulting Private Limited | IRDAI Registered Corporate Agent (Composite) License No CA0738) will not have access to the exchange investor grievance redressal forum, SEBI SCORES/ODR, or arbitration mechanism for such products.
-                    Fixed deposit products offered on this platform are third-party products (TPP) and are not Exchange traded products. These are offered through Blostem Fintech Private Limited. Zerodha Broking Limited (SEBI Registration No.: INZ000031633) is acting solely as a distributor for these products. Any disputes arising with respect to such distribution activity will not have access to SEBI SCORES/ODR, Exchange Investor Grievance Redressal Forum, or Arbitration mechanism. Fixed deposits are regulated by the Reserve Bank of India (RBI).
+                    Never share your passwords, OTPs, PINs, or other confidential account information with anyone. Always verify the source before providing personal or financial information.
+                </p>
+                <p>
+                    TradeX does not guarantee profits or returns from trading or investing. Users should conduct their own research and make decisions according to their individual circumstances and risk tolerance.
+                </p>
+                <p>
+                    <b>Disclaimer:</b> TradeX is a project/demo platform and is not represented as a SEBI-registered stock broker, investment adviser, or depository participant unless and until the appropriate registrations and regulatory requirements are actually obtained.
                 </p>
                  
             </div>

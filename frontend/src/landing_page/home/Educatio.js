@@ -6,18 +6,18 @@ const Education = () => {
       <div className='container mt-5'>
       <div className='row'>
         <div className='col-6'>
-           <img src="media/images/education.svg" style={{width:"70%"}}/>
+           <img src="media/images/education2.png" style={{width:"70%"}}/>
         </div>
 
         <div className='col-6'>
-              <h1 className='mb-3 fs-2'>Free and open market education</h1>
-              <p>Varsity, the largest online stock market education book in the covering everuthing from the basics to advanced trading.</p>
-              <a href="" style={{textDecoration:"none"}}>Versity
+              <h1 className='mb-3 fs-2'>Learn. Explore. Grow.</h1>
+              <p>TradeX makes market learning simple and accessible. Explore useful resources covering investing basics, market concepts, trading strategies, and financial knowledge—all designed to help you make more informed decisions.</p>
+              <a href="" style={{textDecoration:"none"}}>Explore Learning
               <i className='fa ga-long-arrow-right'></i>
               </a>
 
-              <p className='mt-5'>TradingQ&A, the most active trading and investment community</p>
-              <a href='' style={{textDecoration:"none"}}>TradingQ&A
+              <p className='mt-5'>Connect with other traders and investors, share ideas, discuss market concepts, and learn from different perspectives.</p>
+              <a href='' style={{textDecoration:"none"}}>Join the Community
                 <i className='fa fa-long-arroe-right'></i>
               </a>
               </div>

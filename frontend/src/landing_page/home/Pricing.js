@@ -5,8 +5,8 @@ const Pricing = () => {
     <div className='container mb-5'>
       <div className='row'>
         <div className='col-4'>
-          <h1 className='mb-3 fs-2'>Unbeatable prcing</h1>
-          <p>We pioneered the concept of discount breaking and price transparency in India. Flat fees and no hidden charges.</p>
+          <h1 className='mb-3 fs-2'>Transparent Pricing</h1>
+          <p>We believe investing should be simple and affordable. TradeX offers clear, competitive pricing with no confusing charges or hidden surprises. Know exactly what you pay, so you can invest with confidence.</p>
           <a href='' style={{textDecoration:"none"}}>See Pricing
             <i className='fa fa-long-arrow-right' aria-hidden="true"></i>
           </a>
@@ -17,11 +17,11 @@ const Pricing = () => {
             <div className='row text-center'>
               <div className='col p-3 border'>
                 <h1 className='mb-3'>₹0</h1>
-                <p>Free delivery <br/> direct mutual funds</p>
+                <p>Account opening <br/> No charges for getting started</p>
               </div>
               <div className='col p-3 border'>
-                <h1 className='mb-3'>₹20</h1>
-                <p>Intraday and F&O</p>
+                <h1 className='mb-3'>₹0</h1>
+                <p>Market learning <br/> Access educational resources and trading tools</p>
               </div>
             </div>
           </div>

@@ -3,17 +3,21 @@ import React from 'react'
 const Universe = () => {
   return (
     <div className='container'>
-        <div className='row text-center'>
-            <h1>The Zerodha Universe</h1>
+        <div className='row text-center mt-5'>
+            <h1>The TradeX Ecosystem</h1>
+            <p className='mb-0 mt-3'>
+                Explore the different features of TradeX designed to bring trading, portfolio management, market exploration, and financial learning together in one platform.
+            </p>
             <p>
-                Extend your trading and investment experience even further with our partner platforms
+                Our goal is to create a simple and connected experience where users can explore the market, manage their portfolio, and learn about investing through modern technology.
             </p>
              
             <div className='col-4 p-3 mt-5'>
                 <img src="media/images/zerodhaFundhouse.png" style={{height:"60px", width:"200px"}}/>
-                <p className='text-small text-muted'>
+                <p>
                     Our asset management venture <br/> that is creating simple and transparent index funds <br/> to help you save for your goals.
                 </p>
+                
             </div>
             <div className='col-4 p-3 mt-5'>
                 <img src="media/images/sensibullLogo.svg" style={{height:"60px", width:"200px"}}/>
@@ -43,7 +47,7 @@ const Universe = () => {
                 <img src="media/images/dittoLogo.png" style={{height:"60px", width:"200px"}}/>
                 <p class="text-12 text-light-grey">Personalized advice on life <br/>and health insurance. No spam <br/>and no mis-selling.</p>
             </div>
-            <button className='p-3 btn btn-primary fs-5' style={{width:"25%", margin:"0 auto "}}>Sign up Now</button>
+            <button className='p-3 fs-5' style={{width:"25%", margin:"0 auto", backgroundColor:"rgb(0,200,150)", borderRadius:"10px", fontWeight:"500"}}>Sign up Now</button>
         </div>
     </div>
   )
