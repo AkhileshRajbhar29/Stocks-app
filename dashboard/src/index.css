@@ -842,5 +842,13 @@ hr {
   background-color: rgb(212, 212, 212);
 }
 
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
 
+.navbar {
+  position: relative;
+  z-index: 1000;
+}
 

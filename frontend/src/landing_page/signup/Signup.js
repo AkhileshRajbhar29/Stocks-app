@@ -11,28 +11,28 @@ const SignUp = () => {
   const navigate = useNavigate();
 
 
-  const handleSignup=()=>{
-    setError("");
+  const handleSignup = () => {
+  setError("");
 
-    axios
-    .post("http://localhost:3002/signup", {
-      email: loginEmail,
-      password: loginPassword,
-    })
-
-    .then((res)=>{
+  axios
+    .post(
+      "http://localhost:3002/signup",
+      { email: loginEmail, password: loginPassword },
+      { withCredentials: true }
+    )
+    .then((res) => {
       console.log(res.data);
 
       setLoginEmail("");
       setLoginPassword("");
-      
-      navigate("/");
+
+      window.location.href = "http://localhost:3001";  
     })
-    .catch((err)=>{
+    .catch((err) => {
       console.error(err);
       setError(err.response?.data || "Signup failed");
     });
-  };
+};
 
   return (
     <div
@@ -84,7 +84,7 @@ const SignUp = () => {
           >
             Already a member?
             <a
-              href="/"
+              href="/login"
               className="text-decoration-none fw-bold"
               style={{
                 color: "#2196f3",
@@ -149,7 +149,7 @@ const SignUp = () => {
           <button
             className="btn w-100 text-white fw-bold"
             onClick={handleSignup}
-            style={{ height: "46px", borderRadius: "5px", borderRadius:"20px", backgroundColor: "#27233a", fontSize: "19px",
+            style={{ height: "46px", borderRadius: "5px", backgroundColor: "#27233a", fontSize: "19px",
             }}
           >
             Sign Up

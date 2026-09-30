@@ -13,15 +13,34 @@ const{HoldingsModel} = require("./model/HoldingsModel");
 const {PositionsModel} = require ("./model/PositionsModel"); 
 const {OrdersModel} = require("./model/OrdersModel");
 
+const cookieParser = require("cookie-parser");
+const jwt = require("jsonwebtoken");
+
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
 
+  
 
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:3000", "http://localhost:3001"],
+    credentials: true,
+}));
+app.use(cookieParser());
+
 app.use(bodyParser.json());
+
+const setAuthCookie = (res, userId) => {
+    const token = jwt.sign({ id: userId }, process.env.JWT_SECRET, { expiresIn: "7d" });
+    res.cookie("token", token, {
+        httpOnly: true,
+        sameSite: "lax",
+        secure: false, 
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+    });
+};
  
 app.get("/addPositions", (req,res)=>{
     let tempPositions = [
@@ -118,6 +137,7 @@ try{
         password:hashedPassword,
     });
     await newUser.save();
+    setAuthCookie(res, newUser._id);
 
     res.status(201).send("Signup successful");
 } 
@@ -144,7 +164,8 @@ app.post("/login", async(req, res)=>{
         if(!isMatch){
             return res.status(400).send("Invalid email or password");
         }
-
+        
+        setAuthCookie(res, user._id);
         res.status(200).send("Login Successful");
     }
     catch(err){
@@ -155,6 +176,19 @@ app.post("/login", async(req, res)=>{
 
 
 
+app.get("/auth/verify", (req, res) => {
+    try {
+        jwt.verify(req.cookies.token, process.env.JWT_SECRET);
+        res.status(200).json({ loggedIn: true });
+    } catch (err) {
+        res.status(401).json({ loggedIn: false });
+    }
+});
+
+app.post("/auth/logout", (req, res) => {
+    res.clearCookie("token");
+    res.json({ success: true });
+});
 
 app.listen(PORT, ()=>{
     console.log("App started");

@@ -9,27 +9,28 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin= () =>{
-    setError("");
-    
-    axios
-    .post("http://localhost:3002/login", {
-      email: loginEmail,
-      password: loginPassword,
-    })
-    .then((res)=>{
+  const handleLogin = () => {
+  setError("");
+
+  axios
+    .post(
+      "http://localhost:3002/login",
+      { email: loginEmail, password: loginPassword },
+      { withCredentials: true }   
+    )
+    .then((res) => {
       console.log(res.data);
 
       setLoginEmail("");
       setLoginPassword("");
 
-      navigate("/");
+      window.location.href = "http://localhost:3001";  
     })
-    .catch((err)=>{
+    .catch((err) => {
       console.log(err);
-      setError(err.reponse?.data || "Login failed");
-    })
-  }
+      setError(err.response?.data || "Login failed");
+    });
+};
   
   return (
     <div
@@ -37,7 +38,7 @@ const Login = () => {
       style={{ backgroundSize: "cover", backgroundPosition: "center", overflow: "hidden", padding: "20px",   backgroundColor:"rgb(116, 214, 190)"
       }}
     >
-      {/* Main Glass Container */}
+      {/* Main Glass Container  */}
       <div
         className="w-100 position-relative overflow-hidden"
         style={{ maxWidth: "1020px", height: "665px", backgroundColor:"rgb(30, 189, 149)",  border: "2px solid rgba(255,255,255,0.55)", borderRadius: "25px", backdropFilter: "blur(5px)", WebkitBackdropFilter: "blur(5px)", boxShadow: "0 25px 60px rgba(0,0,0,0.45)",
@@ -47,7 +48,7 @@ const Login = () => {
 
  
 
-        {/* ================= Login CARD ================= */}
+         
 
         <div
           className="position-absolute start-50 top-50"
