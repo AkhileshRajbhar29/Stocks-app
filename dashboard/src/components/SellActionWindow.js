@@ -1,45 +1,40 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import axios from "axios";
 
 import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
 
-const BuyActionWindow = ({ uid }) => {
-  const [stockQuantity, setStockQuantity] = useState(1);
-  const [stockPrice, setStockPrice] = useState(0.0);
-
+const SellActionWindow = ({ order }) => {
+  const [stockQuantity, setStockQuantity] = useState(order.qty);
+  const [stockPrice, setStockPrice] = useState(order.price);
+  const [error, setError] = useState("");
   const generalContext = useContext(GeneralContext);
 
-  const handleBuyClick = () => {
+  const handleSellClick = () => {
+    const qty = Number(stockQuantity);
+    if (!qty || qty <= 0) return setError("Enter a valid quantity");
+    if (qty > order.qty) return setError(`You can sell max ${order.qty}`);
+
     axios
       .post(
-        "http://localhost:3002/newOrder",
-        {
-          name: uid,
-          qty: stockQuantity,
-          price: stockPrice,
-          mode: "BUY",
-        },
+        `http://localhost:3002/sellOrder/${order._id}`,
+        { qty, price: stockPrice },
         { withCredentials: true }
       )
       .then(() => {
         generalContext.refreshOrders();
-        generalContext.closeBuyWindow();
+        generalContext.closeSellWindow();
       })
-      
       .catch((err) => {
         console.log(err);
         if (err.response?.status === 401) {
           window.location.href = "http://localhost:3000/login";
+        } else {
+          setError(err.response?.data || "Sell failed");
         }
       });
-  };
-
-  const handleCancelClick = () => {
-    generalContext.closeBuyWindow();
   };
 
   return (
@@ -47,11 +42,11 @@ const BuyActionWindow = ({ uid }) => {
       <div className="regular-order">
         <div className="inputs">
           <fieldset>
-            <legend>Qty.</legend>
+            <legend>Qty. (max {order.qty})</legend>
             <input
               type="number"
-              name="qty"
-              id="qty"
+              min="1"
+              max={order.qty}
               onChange={(e) => setStockQuantity(e.target.value)}
               value={stockQuantity}
             />
@@ -60,23 +55,27 @@ const BuyActionWindow = ({ uid }) => {
             <legend>Price</legend>
             <input
               type="number"
-              name="price"
-              id="price"
               step="0.05"
               onChange={(e) => setStockPrice(e.target.value)}
               value={stockPrice}
             />
           </fieldset>
         </div>
+        {error && <p style={{ color: "#e03131", fontSize: "13px" }}>{error}</p>}
       </div>
 
       <div className="buttons">
-        <span>Margin required ₹140.65</span>
+        <span>Sell {order.name}</span>
         <div>
-          <Link to="" className="btn btn-blue" onClick={handleBuyClick}>
-            Buy
+          <Link
+            to=""
+            className="btn"
+            onClick={handleSellClick}
+            style={{ backgroundColor: "#e03131", color: "#fff" }}
+          >
+            Sell
           </Link>
-          <Link to="" className="btn btn-grey" onClick={handleCancelClick}>
+          <Link to="" className="btn btn-grey" onClick={() => generalContext.closeSellWindow()}>
             Cancel
           </Link>
         </div>
@@ -85,4 +84,4 @@ const BuyActionWindow = ({ uid }) => {
   );
 };
 
-export default BuyActionWindow;
+export default SellActionWindow;

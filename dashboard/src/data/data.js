@@ -82,7 +82,7 @@ export const holdings = [
     day: "+0.21%",
   },
   {
-    name: "INFY",
+    name: "  ",
     qty: 1,
     avg: 1350.5,
     price: 1555.45,

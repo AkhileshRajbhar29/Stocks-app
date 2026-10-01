@@ -41,7 +41,18 @@ const setAuthCookie = (res, userId) => {
         maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 };
- 
+
+const requireAuth = (req, res, next) => {
+    try {
+        const decoded = jwt.verify(req.cookies.token, process.env.JWT_SECRET);
+        req.userId = decoded.id; 
+        next();
+    } catch (err) {
+        res.status(401).send("Please login first");
+    }
+};
+
+
 app.get("/addPositions", (req,res)=>{
     let tempPositions = [
   {
@@ -93,32 +104,86 @@ app.get("/allPositions", async(req, res)=>{
     let allPositions = await(PositionsModel.find({}));
     res.json(allPositions);
       
-})
-
-
-app.post("/newOrder", async(req,res)=>{
-    let newOrder = new OrdersModel({
-        name: req.body.name,
-        qty: req.body.qty,
-        price: req.body.price,
-        mode: req.body.mode,
-    });
-    newOrder.save();
-
-    res.send("Order Saved");
 });
 
-app.get("/allOrders", async(req, res)=>{
-    try{
-        let allOrders = await OrdersModel.find({});
-        res.json(allOrders);
+
+app.post("/newOrder", requireAuth, async (req, res) => {
+    try {
+        const newOrder = new OrdersModel({
+            name: req.body.name,
+            qty: req.body.qty,
+            price: req.body.price,
+            mode: req.body.mode,
+            user: req.userId,
+        });
+        await newOrder.save();
+        res.send("Order Saved");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Failed to save order");
     }
-    catch(err){
+});
+
+app.get("/allOrders", requireAuth, async (req, res) => {
+    try {
+        const allOrders = await OrdersModel.find({ user: req.userId, mode: "BUY" });
+        res.json(allOrders);
+    } catch (err) {
         console.error(err);
         res.status(500).send("Failed to fetch orders");
     }
 });
  
+app.post("/sellOrder/:id", requireAuth, async (req, res) => {
+    try {
+        const sellQty = Number(req.body.qty);
+        if (!Number.isFinite(sellQty) || sellQty <= 0) {
+            return res.status(400).send("Invalid quantity");
+        }
+
+        const order = await OrdersModel.findOneAndUpdate(
+            { _id: req.params.id, user: req.userId, mode: "BUY", qty: { $gte: sellQty } },
+            { $inc: { qty: -sellQty } },
+            { new: true }
+        );
+
+        if (!order) {
+            return res.status(400).send("Order not found or quantity too high");
+        }
+
+        if (order.qty <= 0) {
+            await OrdersModel.deleteOne({ _id: order._id });
+        }
+
+        await OrdersModel.create({
+            name: order.name,
+            qty: sellQty,
+            price: Number(req.body.price),
+            mode: "SELL",
+            user: req.userId,
+        });
+
+        res.send("Sold");
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Failed to sell");
+    }
+});
+
+
+app.get("/soldOrders", requireAuth, async (req, res) => {
+    try {
+        const sold = await OrdersModel.find({ user: req.userId, mode: "SELL" });
+        res.json(sold);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Failed to fetch sold orders");
+    }
+});
+
+
+
 app.post("/signup", async (req, res) =>{
 try{
     const {email,password} = req.body;
