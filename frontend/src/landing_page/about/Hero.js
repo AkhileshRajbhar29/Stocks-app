@@ -1,15 +1,16 @@
 import React from 'react'
+import "./Hero.css";
 
 const Hero = () => {
     return (
-        <div className='container'>
-            <div className="row p-5 mt-5 mb-5">
-                <h1 className='fs-2 text-center'>
+        <div className='container-fluid Hero-page'>
+            <div className="row">
+                <h1 className='fs-2 mt-5 text-center'>
                     Making trading simple with technology
                 </h1>
             </div>
-            <div className="row p-5 mt-5 border-top text-muted" style={{lineHeight:"1.8", fontSize:"1.2em"}}>
-                <div className='col-6 p-5'>
+            <div className="row mt-5 border-top text-muted About-Hero-Div" style={{lineHeight:"1.8", fontSize:"1.2em"}}>
+                <div className='col-6'>
                     <p>
                        TradeX is built with a simple goal: make the stock market experience easier, more transparent, and accessible through modern technology.
                     </p>
@@ -20,7 +21,7 @@ const Hero = () => {
                         TradeX combines a modern user interface with powerful web technologies to create a fast and convenient trading experience. We believe good technology should simplify complex financial information rather than make it harder to understand.
                     </p>
                 </div>
-                <div className='col-6 p-5'>
+                <div className='col-6'>
                     <p>
                         TradeX is designed to help users explore different aspects of the stock market, understand their portfolio, and become more familiar with trading concepts through an easy-to-use platform.
                     </p>

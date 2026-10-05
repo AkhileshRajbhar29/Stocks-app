@@ -1,0 +1,9 @@
+.heroContainer{
+    padding: 48px;
+}
+
+@media (max-width:750px){
+    .heroContainer{
+    padding: 25px;
+}
+}

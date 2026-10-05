@@ -250,6 +250,18 @@ app.get("/auth/verify", (req, res) => {
     }
 });
 
+app.get("/auth/me", requireAuth, async (req, res) => {
+    try {
+        const user = await UsersModel.findById(req.userId).select("email");
+        if (!user) return res.status(404).send("User not found");
+        res.json({ email: user.email });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Something went wrong");
+    }
+});
+
+
 app.post("/auth/logout", (req, res) => {
     res.clearCookie("token");
     res.json({ success: true });

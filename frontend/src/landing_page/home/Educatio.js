@@ -1,12 +1,13 @@
 import React from 'react'
+import "./Education.css";
 
 const Education = () => {
   return (
     <>
-      <div className='container mt-5'>
-      <div className='row'>
-        <div className='col-6'>
-           <img src="media/images/education2.png" style={{width:"70%"}}/>
+      <div className='container-fluid mt-5'>
+      <div className='row education-div'>
+        <div className='col-6 education-img'>
+           <img src="media/images/education2.png" className='education-main-img' />
         </div>
 
         <div className='col-6'>

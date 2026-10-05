@@ -1,0 +1,25 @@
+.main-heading{
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+@media (max-width:1000px){
+    .image-content{
+        display: flex;
+        flex-direction: column;
+        gap:50px;
+    }
+    .image-content > div{
+        width: 100%;
+    }
+    .main-heading{
+        margin-bottom: 0px;
+    }
+}
+
+/* @media (max-width:750px){
+    .container-fluid{
+        padding: 24px;
+    }
+     
+} */

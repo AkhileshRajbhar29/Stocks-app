@@ -1,0 +1,23 @@
+.pricing-container{
+    margin: 24px;
+}
+
+.pricing-container > div{
+    padding: 0px;
+}
+
+@media(max-width:750px){
+    .pricing-container{
+        display: flex;
+        flex-direction: column-reverse;
+        /* padding: 24px; */
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .pricing-container > div {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

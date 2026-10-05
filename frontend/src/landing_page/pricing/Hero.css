@@ -1,0 +1,40 @@
+.pricing-card-img {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
+.hero-heading{
+    margin-top: 48px;
+    padding: 48px;
+}
+.Note{
+    padding: 48px;
+}
+
+@media (max-width: 750px) {
+  .pricing-cards-row {
+    flex-direction: column;
+    padding: 1.5rem !important;
+  }
+
+  .hero-heading{
+    padding: 24px;
+  }
+  .Note{
+    padding: 24px;
+  }
+  .hero-heading h1{
+    margin-top: 0px;
+  }
+  .pricing-card {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .pricing-card-img {
+    max-width: 420px;
+  }
+}

@@ -1,0 +1,32 @@
+.Hero-Heading-div{
+    padding: 48px;
+}
+.search-feature{
+    padding: 48px;
+}
+
+
+@media(max-width:750px){
+    .search-feature{
+        padding: 48px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+    .search-feature > div{
+        width: 100%;
+        max-width: 100%;
+    }
+    .input-field{
+        margin: 5px 0px;
+    }
+
+    .Hero-Heading-div{
+        width: 100%;
+        padding-bottom: 0px;
+        text-align: center;
+    }
+    /* .Hero-Heading{
+        padding-bottom: 0px;
+    } */
+}

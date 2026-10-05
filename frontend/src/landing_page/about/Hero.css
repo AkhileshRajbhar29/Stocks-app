@@ -1,0 +1,22 @@
+.About-Hero-Div{
+    padding-top: 50px;    
+}
+
+@media (max-width:750px){
+    .About-Hero-Div{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-top: 40px;
+}
+.About-Hero-Div > div{
+    width: 100%;
+}
+.Hero-page{
+    padding: 24px;
+}
+
+}
+
+
+

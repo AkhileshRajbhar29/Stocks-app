@@ -51,7 +51,7 @@ const ProductsPage = () => {
         appstore=""
         />
 
-        <p className='text-center fs-5 mt-5'>
+        <p className='text-center fs-5 px-5 mt-5'>
             Want to know more about the technology behind TradeX? Explore our platform features, development approach, and the technologies used to build this project.
         </p>
         <Universe/>

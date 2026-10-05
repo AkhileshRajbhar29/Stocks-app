@@ -1,0 +1,36 @@
+.Universe-container{
+    text-align: center;
+    padding: 80px;
+}
+ 
+
+.product-logo {
+  height: 60px;
+  width: 200px;
+}
+
+@media (max-width: 750px) {
+    .p1, .p2{
+        text-align: left;
+    }
+    .Universe-container{
+        padding: 24px;
+    }
+
+  .product-card {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 1rem !important;
+  }
+
+  .product-logo {
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+  }
+
+  .product-card br {
+    display: none;
+  }
+}

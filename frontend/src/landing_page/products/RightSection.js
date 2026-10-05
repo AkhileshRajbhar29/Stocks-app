@@ -1,4 +1,5 @@
 import React from 'react'
+import "./RightSection.css";
 
 const RightSection = ({
     imageURL,
@@ -7,9 +8,9 @@ const RightSection = ({
     learnMore,
 }) => {
   return (
-    <div className='container mt-5'>
-        <div className='row'>
-            <div className='col-6 p-5 mt-5'>
+    <div className='container-fluid mt-5 '>
+        <div className='row rightSectionContainer'>
+            <div className='col-6 mt-5 rightSectionContainer-textContent'>
                 <h1>{productName}</h1>
                 <p>{productDescription}</p>
 

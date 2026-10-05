@@ -1,0 +1,28 @@
+.Create-Ticket-Container{
+    padding: 48px;
+}
+
+@media(max-width:750px){
+    .Create-Ticket-Container{
+        padding: 24px;
+    }
+    .Create-Ticket-Container > div {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+    }
+    .Create-Ticket-Container > div > h4 {
+        margin-top: 24px;
+    }
+}
+
+
+@media(max-width:480px){
+    .Create-Ticket-Container > div {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+ 

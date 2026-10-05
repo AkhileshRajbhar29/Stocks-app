@@ -841,14 +841,146 @@ hr {
 .action:hover {
   background-color: rgb(212, 212, 212);
 }
+ 
 
-html, body, #root {
-  height: 100%;
+
+html, body {
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.navbar {
-  position: relative;
-  z-index: 1000;
+#root {
+  min-height: 100vh;
 }
 
+/* tables ko side me scroll do */
+.order-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.order-table table {
+  min-width: 600px;
+}
+
+/* Tablet aur chhota: watchlist upar, content niche */
+@media (max-width: 991px) {
+  .topbar-container {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .indices-container {
+    flex-basis: auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding: 8px 12px;
+  }
+
+  .menu-container {
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    padding: 8px 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .menus {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .menus ul {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .menus li {
+    margin-right: 18px;
+  }
+
+  .profile {
+    margin-left: 0;
+  }
+
+  .dashboard-container {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .watchlist-container {
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    overflow-y: auto;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .content {
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    overflow-y: visible;
+    padding: 16px 12px;
+  }
+
+  .orders {
+    height: auto;
+  }
+
+  .watchlist-number {
+    width: 100%;
+  }
+}
+
+/* Phone: cards ek ke neeche ek */
+@media (max-width: 750px) {
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 16px;
+  }
+
+  .col {
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .data {
+    width: 100%;
+  }
+
+  .funds {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+/* Chhota phone */
+@media (max-width: 576px) {
+  .nifty, .sensex {
+    flex-basis: 50%;
+  }
+
+  .col h5 {
+    font-size: 1.4rem;
+  }
+
+  .data .first h3 {
+    font-size: 2rem;
+  }
+
+  #buy-window {
+    width: 92vw !important;
+    left: 4vw !important;
+    right: auto !important;
+  }
+}

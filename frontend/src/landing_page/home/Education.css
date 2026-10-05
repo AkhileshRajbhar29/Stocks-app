@@ -1,0 +1,25 @@
+/* .education-img{
+
+} */
+/* 
+.education-img{
+    width: 70%;
+    height: 100%;
+     
+     
+} */
+
+.education-main-img{
+    width: 90%;
+    height: 100%;
+}
+
+@media(max-width:750px){
+    .education-div{
+        display: flex;
+        flex-direction: column;
+    }
+    .education-div > div {
+        width: 100%;
+    }
+}

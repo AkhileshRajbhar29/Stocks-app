@@ -1,0 +1,27 @@
+.openAccount-btn{
+    width:330px;
+    margin:"0 auto"; 
+    background-color: #00C896; 
+    color:#06121F;
+    font-weight: 500;
+    align-self: center;
+}
+
+.openAccount-btn:hover{
+    background-color: #00C896; 
+}
+
+.openAccountDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.openAccountMainContainer{
+        padding: 40px;
+    }
+
+@media (max-width:750px){
+    .openAccountMainContainer{
+        padding: 24px;
+    }
+}

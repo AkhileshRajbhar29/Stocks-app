@@ -1,10 +1,21 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3002/auth/me", { withCredentials: true })
+      .then((res) => {
+        const namePart = res.data.email.split("@")[0];
+        setUsername(namePart.charAt(0).toUpperCase() + namePart.slice(1));
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
@@ -21,14 +32,14 @@ const Menu = () => {
     <div className="menu-container">
       <img src="logo.png" style={{ width: "50px" }} />
       <div className="menus">
-        <ul>
+        <ul className="mb-0 flex justify-center item-center">
           <li>
             <Link
               style={{ textDecoration: "none" }}
               to="/"
               onClick={() => handleMenuClick(0)}
             >
-              <p className={selectedMenu === 0 ? activeMenuClass : menuClass}>
+              <p className={selectedMenu === 0 ? activeMenuClass : menuClass} style={{marginBottom:"0px"}}>
                 Dashboard
               </p>
             </Link>
@@ -39,7 +50,7 @@ const Menu = () => {
               to="/orders"
               onClick={() => handleMenuClick(1)}
             >
-              <p className={selectedMenu === 1 ? activeMenuClass : menuClass}>
+              <p className={selectedMenu === 1 ? activeMenuClass : menuClass} style={{marginBottom:"0px"}}>
                 Orders
               </p>
             </Link>
@@ -50,7 +61,7 @@ const Menu = () => {
               to="/holdings"
               onClick={() => handleMenuClick(2)}
             >
-              <p className={selectedMenu === 2 ? activeMenuClass : menuClass}>
+              <p className={selectedMenu === 2 ? activeMenuClass : menuClass} style={{marginBottom:"0px"}}>
                 Holdings
               </p>
             </Link>
@@ -61,7 +72,7 @@ const Menu = () => {
               to="/positions"
               onClick={() => handleMenuClick(3)}
             >
-              <p className={selectedMenu === 3 ? activeMenuClass : menuClass}>
+              <p className={selectedMenu === 3 ? activeMenuClass : menuClass} style={{marginBottom:"0px"}}>
                 Positions
               </p>
             </Link>
@@ -69,10 +80,10 @@ const Menu = () => {
           <li>
             <Link
               style={{ textDecoration: "none" }}
-              to="funds"
+              to="/funds"
               onClick={() => handleMenuClick(4)}
             >
-              <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
+              <p className={selectedMenu === 4 ? activeMenuClass : menuClass} style={{marginBottom:"0px"}}>
                 Funds
               </p>
             </Link>
@@ -83,7 +94,7 @@ const Menu = () => {
               to="/apps"
               onClick={() => handleMenuClick(6)}
             >
-              <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
+              <p className={selectedMenu === 6 ? activeMenuClass : menuClass} style={{marginBottom:"0px"}}>
                 Apps
               </p>
             </Link>
@@ -91,8 +102,8 @@ const Menu = () => {
         </ul>
         <hr />
         <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+          <div className="avatar">{username.slice(0, 2).toUpperCase()}</div>
+          <p className="username" style={{marginBottom:"0px"}}>{username}</p>
         </div>
       </div>
     </div>

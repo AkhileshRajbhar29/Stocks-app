@@ -1,0 +1,17 @@
+.leftSection-div{
+    padding: 48px;
+}
+
+@media (max-width:750px){
+    .leftSection-div{
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+    }
+    .leftSection-div > div {
+        width: 100%;
+    }
+    .leftSection-textContent{
+        margin-top: 24px;
+    }
+}

@@ -1,0 +1,15 @@
+.rightSectionContainer{
+    padding: 48px;
+}
+
+@media (max-width:750px){
+    .rightSectionContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 24px;
+    }
+    .rightSectionContainer > div {
+        width: 100%;
+    }
+     
+}

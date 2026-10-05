@@ -1,0 +1,37 @@
+ 
+.smart-investing-img {
+  width: 120%;
+  padding: 48px;
+  padding-top: 0px;
+
+}
+
+ecosystem-img-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 750px) {
+  .bothColumn {
+    flex-direction: column-reverse;
+  }
+
+  .bothColumn > div {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .smart-investing-img {
+    width: 100% !important;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    padding: 0px;
+  }
+
+  .ecosystem-img-div{
+    padding: 0px;
+  }
+}

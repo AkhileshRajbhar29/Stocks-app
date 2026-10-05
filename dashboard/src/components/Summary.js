@@ -1,10 +1,33 @@
-import React from "react";
+// import React from "react";
+
+// const Summary = () => {
+//   return (
+//     <>
+//       <div className="username">
+//         <h6>Hi, User!</h6>
+//         <hr className="divider" />
+//       </div>
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Summary = () => {
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3002/auth/me", { withCredentials: true })
+      .then((res) => {
+        const namePart = res.data.email.split("@")[0];
+        setUsername(namePart.charAt(0).toUpperCase() + namePart.slice(1));
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
       <div className="username">
-        <h6>Hi, User!</h6>
+        <h6>Hi, {username || "User"}!</h6>
         <hr className="divider" />
       </div>
 
