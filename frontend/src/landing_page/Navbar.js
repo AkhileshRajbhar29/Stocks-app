@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
+const DASHBOARD_URL = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
+
 const css = `
 .tx-nav {
   position: relative;
@@ -166,7 +168,7 @@ const Navbar = () => {
   const handleDashboardClick = async () => {
     try {
       await axios.get("https://stocks-app-2.onrender.com/auth/verify", { withCredentials: true });
-      window.location.href = "http://localhost:3001";
+      window.location.href = DASHBOARD_URL;
     } catch (err) {
       navigate("/login");
     }

@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const DASHBOARD_URL = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
+
 
 const Login = () => {
   const [loginEmail, setLoginEmail] = useState("");
@@ -24,7 +26,7 @@ const Login = () => {
       setLoginEmail("");
       setLoginPassword("");
 
-      window.location.href = "http://localhost:3001";  
+      window.location.href = DASHBOARD_URL;  
     })
     .catch((err) => {
       console.log(err);

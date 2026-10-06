@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const FRONTEND = "http://localhost:3000";
+const FRONTEND = process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000";
+
+// const FRONTEND = "http://localhost:3000";
 
 const css = `
 .tx-nav {

@@ -33,7 +33,7 @@ const BuyActionWindow = ({ uid }) => {
       .catch((err) => {
         console.log(err);
         if (err.response?.status === 401) {
-          window.location.href = "http://localhost:3000/login";
+          window.location.href = (process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000") + "/login";
         }
       });
   };

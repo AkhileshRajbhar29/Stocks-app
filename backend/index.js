@@ -23,6 +23,16 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
+app.set("trust proxy", 1);  
+
+app.use(cors({              
+    origin: [process.env.FRONTEND_URL, process.env.DASHBOARD_URL],
+    credentials: true,
+}));
+
+app.use(cookieParser());    
+app.use(bodyParser.json()); 
+
 
 app.use(cors({
     origin: ["http://localhost:3000", "http://localhost:3001"],
@@ -36,8 +46,8 @@ const setAuthCookie = (res, userId) => {
     const token = jwt.sign({ id: userId }, process.env.JWT_SECRET, { expiresIn: "7d" });
     res.cookie("token", token, {
         httpOnly: true,
-        sameSite: "lax",
-        secure: false, 
+        sameSite: isProd ? "none" : "lax",
+        secure: isProd, 
         maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 };
