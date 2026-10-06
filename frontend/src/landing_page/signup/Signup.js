@@ -16,7 +16,7 @@ const SignUp = () => {
 
   axios
     .post(
-      "http://localhost:3002/signup",
+      "https://stocks-app-2.onrender.com/signup",
       { email: loginEmail, password: loginPassword },
       { withCredentials: true }
     )

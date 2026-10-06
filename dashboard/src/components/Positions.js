@@ -9,7 +9,7 @@ import { positions } from "../data/data";
     const [allPositions, setAllPositions] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:3002/allPositions").then((res)=>{
+      axios.get("https://stocks-app-2.onrender.com/allPositions").then((res)=>{
         setAllPositions(res.data);
       });
     },[]);

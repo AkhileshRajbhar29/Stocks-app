@@ -10,8 +10,8 @@ const Orders = () => {
 
   useEffect(() => {
     Promise.all([
-      axios.get("http://localhost:3002/allOrders", { withCredentials: true }),
-      axios.get("http://localhost:3002/soldOrders", { withCredentials: true }),
+      axios.get("https://stocks-app-2.onrender.com/allOrders", { withCredentials: true }),
+      axios.get("https://stocks-app-2.onrender.com/soldOrders", { withCredentials: true }),
     ])
       .then(([buyRes, soldRes]) => {
         setAllOrders(buyRes.data);

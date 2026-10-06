@@ -19,7 +19,7 @@ const SellActionWindow = ({ order }) => {
 
     axios
       .post(
-        `http://localhost:3002/sellOrder/${order._id}`,
+        `https://stocks-app-2.onrender.com/sellOrder/${order._id}`,
         { qty, price: stockPrice },
         { withCredentials: true }
       )

@@ -14,7 +14,7 @@ const Login = () => {
 
   axios
     .post(
-      "http://localhost:3002/login",
+      "https://stocks-app-2.onrender.com/login",
       { email: loginEmail, password: loginPassword },
       { withCredentials: true }   
     )

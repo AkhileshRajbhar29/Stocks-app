@@ -9,7 +9,7 @@ const Menu = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/auth/me", { withCredentials: true })
+      .get("https://stocks-app-2.onrender.com/auth/me", { withCredentials: true })
       .then((res) => {
         const namePart = res.data.email.split("@")[0];
         setUsername(namePart.charAt(0).toUpperCase() + namePart.slice(1));

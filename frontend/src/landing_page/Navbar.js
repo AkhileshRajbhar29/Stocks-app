@@ -158,14 +158,14 @@ const Navbar = () => {
     setOpen(false);
     setDropOpen(false);
     axios
-      .get("http://localhost:3002/auth/verify", { withCredentials: true })
+      .get("https://stocks-app-2.onrender.com/auth/verify", { withCredentials: true })
       .then(() => setLoggedIn(true))
       .catch(() => setLoggedIn(false));
   }, [location.pathname]);
 
   const handleDashboardClick = async () => {
     try {
-      await axios.get("http://localhost:3002/auth/verify", { withCredentials: true });
+      await axios.get("https://stocks-app-2.onrender.com/auth/verify", { withCredentials: true });
       window.location.href = "http://localhost:3001";
     } catch (err) {
       navigate("/login");
@@ -174,7 +174,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:3002/auth/logout", {}, { withCredentials: true });
+      await axios.post("https://stocks-app-2.onrender.com/auth/logout", {}, { withCredentials: true });
     } finally {
       setLoggedIn(false);
       navigate("/login");
