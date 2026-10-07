@@ -23,12 +23,9 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-app.set("trust proxy", 1);  
+const isProd = process.env.NODE_ENV === "production";
 
-// app.use(cors({              
-//     origin: [process.env.FRONTEND_URL, process.env.DASHBOARD_URL],
-//     credentials: true,
-// }));
+app.set("trust proxy", 1);  
 
 const allowedOrigins = [
     process.env.FRONTEND_URL,
