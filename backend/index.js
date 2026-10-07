@@ -25,22 +25,26 @@ const app = express();
 
 app.set("trust proxy", 1);  
 
-app.use(cors({              
-    origin: [process.env.FRONTEND_URL, process.env.DASHBOARD_URL],
+// app.use(cors({              
+//     origin: [process.env.FRONTEND_URL, process.env.DASHBOARD_URL],
+//     credentials: true,
+// }));
+
+const allowedOrigins = [
+    process.env.FRONTEND_URL,
+    process.env.DASHBOARD_URL,
+    "http://localhost:3000",
+    "http://localhost:3001",
+].filter(Boolean);
+
+app.use(cors({
+    origin: allowedOrigins,
     credentials: true,
 }));
 
 app.use(cookieParser());    
 app.use(bodyParser.json()); 
 
-
-app.use(cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
-    credentials: true,
-}));
-app.use(cookieParser());
-
-app.use(bodyParser.json());
 
 const setAuthCookie = (res, userId) => {
     const token = jwt.sign({ id: userId }, process.env.JWT_SECRET, { expiresIn: "7d" });
