@@ -4,6 +4,7 @@ import axios from "axios";
 
 const DASHBOARD_URL = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
 
+
 const css = `
 .tx-nav {
   position: relative;
@@ -15,7 +16,7 @@ const css = `
 }
 .tx-nav * { box-sizing: border-box; }
 .tx-inner {
-  position: relative;
+  position: relative;d
   width: 100%;
   padding: 10px 24px;
   display: flex;

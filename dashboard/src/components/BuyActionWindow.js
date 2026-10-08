@@ -7,6 +7,9 @@ import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3002";
+const FRONTEND_URL = process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000";
+
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
@@ -16,7 +19,7 @@ const BuyActionWindow = ({ uid }) => {
   const handleBuyClick = () => {
     axios
       .post(
-        "http://https://stocks-app-2.onrender.com/newOrder",
+        `${API_URL}/newOrder`,
         {
           name: uid,
           qty: stockQuantity,
@@ -29,11 +32,10 @@ const BuyActionWindow = ({ uid }) => {
         generalContext.refreshOrders();
         generalContext.closeBuyWindow();
       })
-      
       .catch((err) => {
         console.log(err);
         if (err.response?.status === 401) {
-          window.location.href = (process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000") + "/login";
+          window.location.href = `${FRONTEND_URL}/login`;
         }
       });
   };
