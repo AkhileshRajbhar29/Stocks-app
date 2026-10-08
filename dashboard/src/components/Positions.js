@@ -1,8 +1,6 @@
   
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { VerticalGraph } from "./VerticalGraph";
-import { positions } from "../data/data";
 
 
   const Positions = () =>{
