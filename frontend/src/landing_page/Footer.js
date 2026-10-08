@@ -14,28 +14,28 @@ const Footer = () => {
                 </div>
                 <div className='col' >
                     <p className='fw-bold'>Company</p>
-                    <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Products</a><br />
-                    <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>About</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}}  className='mb-3'>Pricing</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}}  className='mb-3'>Referral program</a><br />
-                    <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Careers</a><br />
+                    <a style={{textDecoration:"none", color:"black"}} className='mb-3'>Products</a><br />
+                    <a style={{textDecoration:"none", color:"black"}} className='mb-3'>About</a><br />
+                    <a style={{textDecoration:"none", color:"black"}}  className='mb-3'>Pricing</a><br />
+                    <a style={{textDecoration:"none", color:"black"}}  className='mb-3'>Referral program</a><br />
+                    <a style={{textDecoration:"none", color:"black"}} className='mb-3'>Careers</a><br />
                     {/* <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Zerodha.tech</a><br />
                     <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Press & media</a><br />
                     <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Zerodha cares (CSR)</a> */}
                 </div>
                 <div className='col'>
                     <p className='fw-bold'>Support</p>
-                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Contact</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Support Center</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Help & FAQs</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Trading Resources</a><br />
-                    <a href="#"  style={{textDecoration:"none", color:"black"}} >Downloads</a><br />
+                    <a style={{textDecoration:"none", color:"black"}} >Contact</a><br />
+                    <a style={{textDecoration:"none", color:"black"}} >Support Center</a><br />
+                    <a style={{textDecoration:"none", color:"black"}} >Help & FAQs</a><br />
+                    <a style={{textDecoration:"none", color:"black"}} >Trading Resources</a><br />
+                    <a style={{textDecoration:"none", color:"black"}} >Downloads</a><br />
                 </div>
                 <div className='col'>
                     <p className='fw-bold'>Account</p>
-                    <a href="#" style={{textDecoration:"none" , color:"black"}} >Open an account</a><br />
-                    <a href="#" style={{textDecoration:"none" , color:"black"}}>Login</a><br />
-                    <a href="#" style={{textDecoration:"none" , color:"black"}}>Fund Your Account</a><br />
+                    <a style={{textDecoration:"none" , color:"black"}} >Open an account</a><br />
+                    <a style={{textDecoration:"none" , color:"black"}}>Login</a><br />
+                    <a style={{textDecoration:"none" , color:"black"}}>Fund Your Account</a><br />
                 </div>
 
             </div>

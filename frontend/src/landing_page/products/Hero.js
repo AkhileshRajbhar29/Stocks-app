@@ -13,7 +13,7 @@ const Hero = () => {
         </p>
         <p className='mt-3 mb-5'>
           Check out our{" "}
-          <a href='' style={{textDecoration:"none"}}>product features{" "}
+          <a style={{textDecoration:"none"}}>product features{" "}
             <i className='fa fa-long-arrow-right' aria-hidden="true"> </i>
           </a>
         </p>

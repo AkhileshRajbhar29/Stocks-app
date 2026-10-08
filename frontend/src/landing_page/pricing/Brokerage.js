@@ -4,7 +4,7 @@ const Brokerage = () => {
   return (
     <div className='container'>
         <div className='row p-5 mt-5 text-center border-top'>
-                <a href="" style={{textDecoration:"none"}}>
+                <a style={{textDecoration:"none"}}>
                     <h3 className='fs-5'>Brokerage calculation</h3>
                 </a>
                 <ul className='text-start text-muted' style={{lineHeight:"2.5", fontSize:'14px'}}>

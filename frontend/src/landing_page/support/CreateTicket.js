@@ -14,14 +14,14 @@ const CreateTicket = () => {
             Account Opening
           </h4>
 
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Create a New Account</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Complete Your Profile</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Individual Account Setup</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Business Account Setup</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>NRI Account Information</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Account Charges</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Bank Account Linking</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Getting Started</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Create a New Account</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Complete Your Profile</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Individual Account Setup</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Business Account Setup</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>NRI Account Information</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Account Charges</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Bank Account Linking</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Getting Started</a><br/>
         </div>
 
         <div className='col-4 mt-2 mb-2'>
@@ -30,14 +30,14 @@ const CreateTicket = () => {
             Your TradeX Account
           </h4>
 
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Login & Password Help</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Profile Updates</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>KYC & Verification</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Bank Details</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Manage Your Account</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Charges & Fees</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Transfer Holdings</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Security Settings</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Login & Password Help</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Profile Updates</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>KYC & Verification</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Bank Details</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Manage Your Account</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Charges & Fees</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Transfer Holdings</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Security Settings</a><br/>
         </div>
 
         <div className='col-4 mt-2 mb-2'>
@@ -46,15 +46,15 @@ const CreateTicket = () => {
             Trading & Orders
           </h4>
 
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Order Types</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Margin & Leverage</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Web & Mobile Platform</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Trading FAQs</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Market Actions</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Price Alerts</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Developer API</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Trading Tools</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Portfolio Insights</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Order Types</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Margin & Leverage</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Web & Mobile Platform</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Trading FAQs</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Market Actions</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Price Alerts</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Developer API</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Trading Tools</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Portfolio Insights</a><br/>
         </div>
 
         <div className='col-4 mt-2 mb-2'>
@@ -63,14 +63,14 @@ const CreateTicket = () => {
             Funds & Payments
           </h4>
 
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Add Funds</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Withdraw Funds</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Payment Methods</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Transaction History</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Bank Verification</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Fund Transfer Limits</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Processing Time</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Payment FAQs</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Add Funds</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Withdraw Funds</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Payment Methods</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Transaction History</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Bank Verification</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Fund Transfer Limits</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Processing Time</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Payment FAQs</a><br/>
         </div>
 
         <div className='col-4 mt-2 mb-2'>
@@ -79,14 +79,14 @@ const CreateTicket = () => {
             Portfolio & Reports
           </h4>
 
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Portfolio Overview</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Profit & Loss Reports</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Tax Reports</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Trade History</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Account Statements</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Download Reports</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Performance Analysis</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Investment Insights</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Portfolio Overview</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Profit & Loss Reports</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Tax Reports</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Trade History</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Account Statements</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Download Reports</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Performance Analysis</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Investment Insights</a><br/>
         </div>
 
         <div className='col-4 mt-2 mb-2'>
@@ -95,14 +95,14 @@ const CreateTicket = () => {
             Investments
           </h4>
 
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Stocks</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Mutual Funds</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>ETFs</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>IPO Information</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Long-Term Investing</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Market Research</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Watchlists</a><br/>
-          <a href="" style={{textDecoration:"none", lineHeight:"2.5"}}>Learning Resources</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Stocks</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Mutual Funds</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>ETFs</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>IPO Information</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Long-Term Investing</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Market Research</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Watchlists</a><br/>
+          <a style={{textDecoration:"none", lineHeight:"2.5"}}>Learning Resources</a><br/>
         </div>
 
       </div>

@@ -8,7 +8,7 @@ const Pricing = () => {
         <div className='col-4'>
           <h1 className='mb-3 fs-2'>Transparent Pricing</h1>
           <p>We believe investing should be simple and affordable. TradeX offers clear, competitive pricing with no confusing charges or hidden surprises. Know exactly what you pay, so you can invest with confidence.</p>
-          <a href='' style={{textDecoration:"none"}}>See Pricing
+          <a style={{textDecoration:"none"}}>See Pricing
             <i className='fa fa-long-arrow-right' aria-hidden="true"></i>
           </a>
         </div>

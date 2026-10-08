@@ -9,7 +9,7 @@ const Login = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [error, setError] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleLogin = () => {
   setError("");
@@ -123,7 +123,7 @@ const Login = () => {
           <button
             className="btn w-100 text-white fw-bold"
             onClick={handleLogin}
-            style={{ height: "46px", borderRadius: "5px", borderRadius:"20px", backgroundColor: "#27233a", fontSize: "19px",
+            style={{ height: "46px", borderRadius:"20px", backgroundColor: "#27233a", fontSize: "19px",
             }}
           >
             Login

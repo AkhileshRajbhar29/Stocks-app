@@ -16,7 +16,7 @@ const RightSection = ({
 
             </div>
             <div className='col-6'>
-                <img src={imageURL}  style={{height:"100%", width:"100%"}}/>
+                <img src={imageURL} alt="right_image" style={{height:"100%", width:"100%"}}/>
             </div>
         </div>
     </div>
