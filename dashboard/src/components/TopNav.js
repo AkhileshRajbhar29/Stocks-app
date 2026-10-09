@@ -129,7 +129,7 @@ const TopNav = () => {
       <style>{css}</style>
       <div className="tx-inner">
         <a className="tx-logo" href={FRONTEND + "/"}>
-          <img src={FRONTEND + "/media/images/TradeX_logo.svg"} alt="logo" />
+          <img src={FRONTEND + "/media/images/tradex_logo.svg"} alt="logo" />
         </a>
 
         <button className="tx-toggle" type="button" aria-label="Toggle menu" onClick={() => setOpen(!open)}>

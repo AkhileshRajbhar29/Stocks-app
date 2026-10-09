@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='container-fluid border-top mt-5 footer-container'>
             <div className='row mt-5'>
                 <div className='col'>
-                    <img src="media/images/TradeX_logo.svg" style={{ width: "50%"}}  alt="Logo" />
+                    <img src="media/images/tradex_logo.svg" style={{ width: "50%"}}  alt="Logo" />
                     <p>
                         &copy; 2026, TradeX. All rights reserved.
                     </p>
@@ -19,9 +19,6 @@ const Footer = () => {
                     <a style={{textDecoration:"none", color:"black"}}  className='mb-3'>Pricing</a><br />
                     <a style={{textDecoration:"none", color:"black"}}  className='mb-3'>Referral program</a><br />
                     <a style={{textDecoration:"none", color:"black"}} className='mb-3'>Careers</a><br />
-                    {/* <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Zerodha.tech</a><br />
-                    <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Press & media</a><br />
-                    <a  href="#"  style={{textDecoration:"none", color:"black"}} className='mb-3'>Zerodha cares (CSR)</a> */}
                 </div>
                 <div className='col'>
                     <p className='fw-bold'>Support</p>

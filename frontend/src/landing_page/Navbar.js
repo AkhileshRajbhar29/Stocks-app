@@ -189,7 +189,7 @@ const Navbar = () => {
       <style>{css}</style>
       <div className="tx-inner">
         <Link className="tx-logo" to="/">
-          <img src="/media/images/TradeX_logo.svg" alt="logo" />
+          <img src="media/images/tradex_logo.svg" alt="logo" />
         </Link>
 
         <button className="tx-toggle" type="button" aria-label="Toggle menu" onClick={() => setOpen(!open)}>
