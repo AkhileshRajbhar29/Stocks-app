@@ -34,10 +34,6 @@ const allowedOrigins = [
     "http://localhost:3001",
 ].filter(Boolean);
 
-// app.use(cors({
-//     origin: allowedOrigins,
-//     credentials: true,
-// }));
 
 app.use(cors({
     origin: (origin, callback) => {
